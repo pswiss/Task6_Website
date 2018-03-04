@@ -1,0 +1,33 @@
+h1 {
+    color: plum;
+    font-style: oblique;
+    font-kerning: auto;
+    font-size-adjust: auto;
+    font-size:28pt;
+}
+
+#navBar {
+    font-size: 18pt;
+    color:red;
+}
+
+a{
+    font-family: cursive
+}
+
+a:hover{
+    color:red;
+}
+
+a:visited{
+    color:gray
+}
+
+a:active{
+    color:yellow
+}
+
+#mainText {
+    color: black;
+    font-size: 16pt
+}
