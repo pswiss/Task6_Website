@@ -3,14 +3,12 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>My Webcam</title>
+	<title>Our Webcam</title>
 	
-	<link href="./My Webcam_files/webcam_styles.css" rel="stylesheet" type="text/css">
+    <link href="styles/webcam_styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-   <h1>My Webcam</h1>
-    
     <div id="navBar">
         <hr>
         <p align="center">
@@ -20,20 +18,47 @@
             <a href="\info.html">Info</a></p>
         <hr>
     </div>
-   
-   <button id="btnWS" title="Click to start webcam" disabled="">Start Webcam</button>
+    
+       <h1 align='center'>Our 11-Week Webcam Project</h1>
    
    <h3 id="timestamp">Time Stamp</h3>
-   
-   <img id="image" alt="My webcam image" width="640" height="480">
-   
+    
+    
+    <div class="television">
+   <div class="television__top">
+      <div class="television__antenna television__antenna--left"></div>
+      <div class="television__antenna television__antenna--right"></div>
+      <div class="television__antenna__base"></div>
+   </div><!-- television__top -->
+   <div class="television__center">
+      <div class="television__screen">
+         <img class="camera_image" src="images/webcam_image.png" id="image" alt="My webcam image" width="260" height="180">
+      </div><!-- television__screen -->
+      <div class="television__channels-wrapper">
+         <ul align='center' class="television__channels">
+           <button class="btn" id="btnWS" title="Click to open a portal into parallel worlds" disabled="">
+             <img class="button_image" src="images/play_pause_button.png" width="40" height="40">             
+            </button>
+         </ul>
+      </div><!-- television__channels-wrapper -->
+   </div><!-- television__center -->
+   <div class="television__base">
+      <div class="television__foot television__foot--left"></div>
+      <div class="television__foot television__foot--right"></div>
+   </div><!-- television__base -->
+</div><!-- television -->
+        
+    
+ 
    <h3>Log</h3>
-   
+   <p align='center'>
    <textarea id="msg" rows="20" cols="50">Connecting to ws://10.106.3.31/stream ...
 Connected.
 </textarea>
+    </p>
     
     <script src="./My Webcam_files/webcam_functions.js.download"></script>
 
 
-</body></html>
+</body>
+</html>
