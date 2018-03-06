@@ -28,6 +28,179 @@ a:active{
 }
 
 #mainText {
-    color: black;
-    font-size: 16pt
+    color: red;
+    font-size: 16pt;
+    font-weight:200;
+}
+
+#msg {
+    border: 5px solid #CCCCCC;
+    border-radius: 5px;
+    text-align:center;
+    font-size: 10pt;
+    color: aliceblue;
+    font-weight: bold;
+
+}
+
+html {
+    background-image:url("../images/background.jpg");
+    background-position: center;
+    background-color: chartreuse;
+}
+
+h1{
+    color:aliceblue;
+    border-width: thick;
+    border-color: aliceblue;
+    border-style: double;
+    background-image: url(../images/bokeh-light-vintage-background_1356-266.jpg);
+    background-clip: border-box;
+    
+}
+
+h3{
+    color:aliceblue;
+    border-width: thick;
+
+    background-image: url(../images/bokeh-light-vintage-background_1356-266.jpg);
+    background-clip: border-box;
+    font-size: 18pt;
+    
+}
+
+
+a{
+    color:aliceblue;
+    font-family: fantasy;
+    font-size: 20pt;    
+}
+
+.btn{
+    border-width: thick;
+    border-radius: 5px;
+    border-color: black;
+    width: 50px;
+    height: 50px;
+    background-color: chocolate;
+}
+
+
+h3{
+    color: aliceblue;
+    text-align: center;
+}
+
+textarea{
+  background-image: url("../images/bokeh-light-vintage-background_1356-266.jpg");
+}
+
+
+.camera_image{
+    border-radius: 48px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+
+.television {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.television__top {
+    width: 40%;
+    margin: auto;
+    position: relative;
+}
+
+.television__antenna {
+  width: 10px;
+  height: 100px;
+  background-color: black;
+  margin-bottom: -10px;
+}
+
+.television__antenna--left {
+  transform: rotate(-30deg);
+  float: left;
+}
+
+.television__antenna--right {
+  transform: rotate(30deg);
+  float: right;
+}
+
+.television__antenna__base {
+  height: 20px;
+  background-color: black;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+  margin-bottom: 10px;
+  clear: both;
+  position: relative;
+  z-index: 2;
+}
+
+.television__center {
+  position: relative;
+  z-index: 2;
+  width: 350px;
+  height: 200px;
+  background-color: #7a4e27;
+  border: solid 3px #eef4c4;
+  box-shadow: -10px -10px #d64832;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+.television__screen {
+  width: 270px;
+  height: 190px;
+  background-color: black;
+  border-radius: 48px;
+  float: left;
+}
+
+.television__channels-wrapper {
+  width: 75px;
+  height: 85px;
+  background-color: #efd6b7;
+  border-radius: 5px;
+  float: right;
+}
+
+.television__channels {
+  padding: 0;
+}
+
+.television__base {
+  width: 60%;
+  margin: auto;
+}
+
+.television__base:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.television__foot {
+  width: 20px;
+  height: 70px;
+   margin-top: -20px;
+  background-color: #7d4d25;
+  border: solid 3px #eed5b6;
+  border-radius: 48px;
+}
+
+.television__foot--left {
+  transform: rotate(30deg);
+  float: left;
+}
+
+.television__foot--right {
+  transform: rotate(-30deg);
+  float: right;
 }
