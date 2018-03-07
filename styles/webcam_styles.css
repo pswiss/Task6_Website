@@ -34,22 +34,51 @@ h3{
     
 }
 
-
 a{
     color:aliceblue;
     font-family: fantasy;
     font-size: 20pt;    
 }
 
+a:hover{
+    color:crimson;
+}
+
+a:visited{
+    color:darkorange;
+}
+
+a:active{
+    color:skyblue;
+}
+
+
 .btn{
     border-width: thick;
     border-radius: 5px;
     border-color: black;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 70px;
     background-color: chocolate;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color:black;
 }
 
+.btn:hover{
+    background-color: #3e8e41
+}
+
+.btn:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button_image{
+    margin-left: -2px;
+}
 
 h3{
     color: aliceblue;
@@ -69,12 +98,12 @@ textarea{
 
 
 .television {
-  width: 600px;
+  width: 410px;
   margin: 0 auto;
 }
 
 .television__top {
-    width: 40%;
+    width: 20%;
     margin: auto;
     position: relative;
 }
@@ -101,7 +130,7 @@ textarea{
   background-color: black;
   border-top-left-radius: 48px;
   border-top-right-radius: 48px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   clear: both;
   position: relative;
   z-index: 2;
@@ -110,30 +139,24 @@ textarea{
 .television__center {
   position: relative;
   z-index: 2;
-  width: 350px;
-  height: 200px;
+  width: 410px;
+  height: 420px;
   background-color: #7a4e27;
   border: solid 3px #eef4c4;
-  box-shadow: -10px -10px #d64832;
+  box-shadow: -5px -5px #d64832;
   border-radius: 20px;
   margin: 0 auto;
-  padding: 10px 15px;
 }
 
-.television__screen {
-  width: 270px;
-  height: 190px;
-  background-color: black;
-  border-radius: 48px;
-  float: left;
-}
 
 .television__channels-wrapper {
-  width: 75px;
-  height: 85px;
+  width: 100px;
+  height: 100px;
   background-color: #efd6b7;
-  border-radius: 5px;
-  float: right;
+  border-radius: 20px;
+  float:right;
+    margin-right: 150px;
+    margin-top: 10px;
 }
 
 .television__channels {
