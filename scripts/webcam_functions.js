@@ -38,10 +38,12 @@ function doConnect() { // makes a connection and defines callbacks
 function onOpen(evt) { // when handshake is complete:
 	writeToScreen("Connected.");
 	//*** Change the text of the button to read "Stop Webcam" ***//
-
+    document.getElementById("btnWS").innnerHTML = "STOP";
 	//*** Change the title attribute of the button to display "Click to stop webcam" ***//
+    document.getElementById("btnWS").title = "Click to stop webcam";
 
 	//*** Enable the button ***//
+    document.getElementById("myBtn").disabled = false;
 
 
 	buttonClicked = false;
@@ -50,10 +52,13 @@ function onOpen(evt) { // when handshake is complete:
 function onClose(evt) { // when socket is closed:
 	writeToScreen("Disconnected. Error: " + evt);
 	//*** Change the text of the button to read "Start Webcam" ***//
+    document.getElementById("btnWS").innnerHTML = "START";
         
     //*** Change the title attribute of the button to display "Click to start webcam" ***//
+    document.getElementById("btnWS").title = "Click to start webcam";
         
     //*** Enable the button ***//
+    document.getElementById("myBtn").disabled = false;
     
     
     // If the user never actually clicked the button to stop the webcam, reconnect.
@@ -84,11 +89,13 @@ function onError(evt) { // when an error occurs
 	writeToScreen("Websocket error");
 	
 	//*** Change the text of the button to read "Start Webcam" ***//
+    document.getElementById("btnWS").innnerHTML = "START";
 		
     //*** Change the title attribute of the button to display "Click to start webcam" ***//
+    document.getElementById("btnWS").title = "Click to start webcam";
 		
     //*** Enable the button ***//
-	
+    document.getElementById("myBtn").disabled = false;
 	
 	buttonClicked = false;
 }
