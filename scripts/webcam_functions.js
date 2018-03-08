@@ -1,8 +1,32 @@
 var websocket = null; // websocket instance
 var localhost = "192.168.1.65";
-var b = document.getElementById('btnWS');
+var btn = document.getElementById('btnWS');
 var buttonClicked = false;
+var time = document.getElementById('timestamp');
 
+btn.addEventListener('click',updateButton);
+
+function updateButton(){
+    if(btn.textContent == 'Start'){
+        btn.textContent = 'Stop';
+        btn.title = 'Click to stop webcam';
+        btn.disabled = false;
+        //time.textContent = Math.floor(Date.now());
+        var dt = new Date();
+        time.textContent = dt.toUTCString();
+    }
+    else{
+        btn.textContent = 'Start';
+        btn.title = 'Click to start webcam';
+        btn.disabled = false;
+
+    }
+}
+
+
+
+
+/*
 // Initialize the websocket
 function init() {
 	if(window.location.hostname != "") {
@@ -13,9 +37,9 @@ function init() {
 }
 
 function doConnect() { // makes a connection and defines callbacks
-	if (b.innerText == "Start Webcam") {
+	if (btn.innerText == "Start") {
 		writeToScreen("Connecting to ws://" + localhost + "/stream ...");
-		b.disabled = true;
+		btn.disabled = true;
 		websocket = new WebSocket("ws://" + localhost + "/stream");
 		websocket.onopen = function(evt) {
 			onOpen(evt)
@@ -37,24 +61,17 @@ function doConnect() { // makes a connection and defines callbacks
 
 function onOpen(evt) { // when handshake is complete:
 	writeToScreen("Connected.");
-	//*** Change the text of the button to read "Stop Webcam" ***//
-
-	//*** Change the title attribute of the button to display "Click to stop webcam" ***//
-
-	//*** Enable the button ***//
-
-
+	btn.innerText = 'Stop';
+    btn.title = 'Click to stop webcam';
+    btn.disabled = false;
 	buttonClicked = false;
 }
 
 function onClose(evt) { // when socket is closed:
 	writeToScreen("Disconnected. Error: " + evt);
-	//*** Change the text of the button to read "Start Webcam" ***//
-        
-    //*** Change the title attribute of the button to display "Click to start webcam" ***//
-        
-    //*** Enable the button ***//
-    
+	btn.innerText = 'Start';
+    btn.title = 'Click to start webcam';
+    btn.disabled = false;
     
     // If the user never actually clicked the button to stop the webcam, reconnect.
 	if (buttonClicked == false) {
@@ -64,8 +81,7 @@ function onClose(evt) { // when socket is closed:
 }
 
 function onMessage(msg) { // when client receives a WebSocket message because a new image is ready:
-	//*** Display a new timestamp ***//
-	
+	time.textContent = Math.floor(Date.now());
 	// Get the image just taken from WiFi chip's RAM.
 	var image = document.getElementById('image');
 	var reader = new FileReader();
@@ -78,23 +94,29 @@ function onMessage(msg) { // when client receives a WebSocket message because a 
 	reader.readAsDataURL(msg.data);
 }
 
-
 function onError(evt) { // when an error occurs
 	websocket.close();
 	writeToScreen("Websocket error");
 	
-	//*** Change the text of the button to read "Start Webcam" ***//
-		
-    //*** Change the title attribute of the button to display "Click to start webcam" ***//
-		
-    //*** Enable the button ***//
-	
+	btn.innerText = 'Start';
+    btn.title = 'Click to start webcam';
+    btn.disabled = false;	
 	
 	buttonClicked = false;
 }
 
 // Set up event listeners
-//*** When the button is clicked, disable it and set the 'buttonClicked' variable to true, and depending on whether a Websocket is open or not, either run "doConnect()" or "websocket.close()" ***//
+btn.addEventListener('click',newListener);
+newListener(){
+    btn.disabled = true;
+    buttonClicked = false;
+    if(websocket.onopen){
+        doConnect();
+    }
+    else{
+        websocket.close();
+    }
+}
 
 
 // Function to display to the message box
@@ -106,3 +128,7 @@ function onError(evt) { // when an error occurs
 
 // Open Websocket as soon as page loads
 window.addEventListener("load", init, false);
+
+
+
+*/

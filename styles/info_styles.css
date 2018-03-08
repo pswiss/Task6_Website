@@ -1,7 +1,40 @@
 h1 {
-    color: green;
+    color: #efbb1f;
+    font-style: normal;
+    font-kerning: auto;
+    font-size-adjust: auto;
+    font-size:36pt;
+}
+
+h2 {
+    color: #efbb1f;
+    font-style: normal;
+    font-kerning: auto;
+    font-size-adjust: auto;
+    font-size:20pt;
+}
+
+h3 {
+    color: #c6490f;
+    font-style: oblique;
+    font-kerning: auto;
+    font-size-adjust: auto;
+    font-size:20pt;
+}
+
+p {
+    color: #efbb1f;
     font-style: oblique;
     font-kerning: auto;
     font-size-adjust: auto;
     font-size:28pt;
 }
+
+a {
+    color: #efbb1f;
+    font-style: oblique;
+    font-kerning: auto;
+    font-size-adjust: auto;
+    font-size:28pt;
+}
+
